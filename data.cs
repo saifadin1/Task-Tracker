@@ -1,12 +1,12 @@
 public static class Data
 {
     public readonly static string path = @"~\Tasks.json";
-    public static task GetById(int id)
+    public static Task GetById(int id)
     {
         var text = File.ReadAllText(path);
         JArray json = JArray.Parse(text);
         var task = json.FirstOrDefault(obj => obj["id"].Value<int>() == id);
-        return task;
+        return task.ToObject<Task>();
     }
     public static void AddTask(Task task)
     {
