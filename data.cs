@@ -1,6 +1,13 @@
 public static class Data
 {
     public readonly static string path = @"D:\C#_Projects\TaskTracker\Tasks.json";
+    public static task GetById(int id)
+    {
+        var text = File.ReadAllText(path);
+        JArray json = JArray.Parse(text);
+        var task = json.FirstOrDefault(obj => obj["id"].Value<int>() == id);
+        return task;
+    }
     public static void AddTask(Task task)
     {
         if (!File.Exists(path))
@@ -42,9 +49,7 @@ public static class Data
     }
     public static void MarkTaskInProgress(int id)
     {
-        var text = File.ReadAllText(path);
-        JArray json = JArray.Parse(text);
-        var task = json.FirstOrDefault(obj => obj["id"].Value<int>() == id);
+        var task = GetById(id);
         if(task == null)
         {
             Console.WriteLine("Task not found");
@@ -56,23 +61,19 @@ public static class Data
     }
     public static void MarkTaskDone(int id)
     {
-        var text = File.ReadAllText(path);
-        JArray json = JArray.Parse(text);
-        var task = json.FirstOrDefault(obj => obj["id"].Value<int>() == id);
+        var task = GetById(id);
         if(task == null)
         {
             Console.WriteLine("Task not found");
             return;
-        }
+        }   
         task["status"] = Status.done.ToString();
         File.WriteAllText(path, json.ToString());
         Console.WriteLine("Task marked as Done");
     }
     public static void Delete(int id)
     {
-        var text = File.ReadAllText(path);
-        JArray json = JArray.Parse(text);
-        var task = json.FirstOrDefault(obj => obj["id"].Value<int>() == id);
+        var task = GetById(id);
         if(task == null)
         {
             Console.WriteLine("Task not found");
