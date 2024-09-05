@@ -1,0 +1,17 @@
+D:\C#_Projects\TaskTracker\bin\Debug\net8.0\TaskTracker.exe
+D:\C#_Projects\TaskTracker\bin\Debug\net8.0\TaskTracker.deps.json
+D:\C#_Projects\TaskTracker\bin\Debug\net8.0\TaskTracker.runtimeconfig.json
+D:\C#_Projects\TaskTracker\bin\Debug\net8.0\TaskTracker.dll
+D:\C#_Projects\TaskTracker\bin\Debug\net8.0\TaskTracker.pdb
+D:\C#_Projects\TaskTracker\obj\Debug\net8.0\TaskTracker.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#_Projects\TaskTracker\obj\Debug\net8.0\TaskTracker.AssemblyInfoInputs.cache
+D:\C#_Projects\TaskTracker\obj\Debug\net8.0\TaskTracker.AssemblyInfo.cs
+D:\C#_Projects\TaskTracker\obj\Debug\net8.0\TaskTracker.csproj.CoreCompileInputs.cache
+D:\C#_Projects\TaskTracker\obj\Debug\net8.0\TaskTracker.dll
+D:\C#_Projects\TaskTracker\obj\Debug\net8.0\refint\TaskTracker.dll
+D:\C#_Projects\TaskTracker\obj\Debug\net8.0\TaskTracker.pdb
+D:\C#_Projects\TaskTracker\obj\Debug\net8.0\TaskTracker.genruntimeconfig.cache
+D:\C#_Projects\TaskTracker\obj\Debug\net8.0\ref\TaskTracker.dll
+D:\C#_Projects\TaskTracker\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\C#_Projects\TaskTracker\obj\Debug\net8.0\TaskTracker.csproj.AssemblyReference.cache
+D:\C#_Projects\TaskTracker\obj\Debug\net8.0\TaskTrac.2CCAFB19.Up2Date
