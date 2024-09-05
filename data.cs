@@ -1,6 +1,6 @@
 public static class Data
 {
-    public readonly static string path = @"D:\C#_Projects\TaskTracker\Tasks.json";
+    public readonly static string path = @"~\Tasks.json";
     public static task GetById(int id)
     {
         var text = File.ReadAllText(path);
