@@ -25,4 +25,9 @@
         int id = Convert.ToInt32(commands[1]);
         Data.MarkTaskDone(id);
     }
+    if(commands.Length == 2 && commands[0] == "delete")
+    {
+        int id = Convert.ToInt32(commands[1]);
+        Data.Delete(id);
+    }
 }   

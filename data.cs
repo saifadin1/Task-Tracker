@@ -68,5 +68,18 @@ public static class Data
         File.WriteAllText(path, json.ToString());
         Console.WriteLine("Task marked as Done");
     }
-
+    public static void Delete(int id)
+    {
+        var text = File.ReadAllText(path);
+        JArray json = JArray.Parse(text);
+        var task = json.FirstOrDefault(obj => obj["id"].Value<int>() == id);
+        if(task == null)
+        {
+            Console.WriteLine("Task not found");
+            return;
+        }
+        json.Remove(task);
+        File.WriteAllText(path, json.ToString());
+        Console.WriteLine("Task has been deleted successfully"); 
+    }
 }
