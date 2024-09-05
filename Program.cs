@@ -15,4 +15,14 @@
     if(commands.Length == 1 && commands[0] == "list"){
         Data.ListTasks();
     }
+    if(commands.Length == 2 && commands[0] == "mark-in-progress")
+    {
+        int id = Convert.ToInt32(commands[1]);
+        Data.MarkTaskInProgress(id);
+    }
+    if(commands.Length == 2 && commands[0] == "mark-done")
+    {
+        int id = Convert.ToInt32(commands[1]);
+        Data.MarkTaskDone(id);
+    }
 }   

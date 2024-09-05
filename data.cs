@@ -40,4 +40,33 @@ public static class Data
             Console.WriteLine();
         }
     }
+    public static void MarkTaskInProgress(int id)
+    {
+        var text = File.ReadAllText(path);
+        JArray json = JArray.Parse(text);
+        var task = json.FirstOrDefault(obj => obj["id"].Value<int>() == id);
+        if(task == null)
+        {
+            Console.WriteLine("Task not found");
+            return;
+        }
+        task["status"] = Status.InProgress.ToString();
+        File.WriteAllText(path, json.ToString());
+        Console.WriteLine("Task marked as In Progress");
+    }
+    public static void MarkTaskDone(int id)
+    {
+        var text = File.ReadAllText(path);
+        JArray json = JArray.Parse(text);
+        var task = json.FirstOrDefault(obj => obj["id"].Value<int>() == id);
+        if(task == null)
+        {
+            Console.WriteLine("Task not found");
+            return;
+        }
+        task["status"] = Status.done.ToString();
+        File.WriteAllText(path, json.ToString());
+        Console.WriteLine("Task marked as Done");
+    }
+
 }
